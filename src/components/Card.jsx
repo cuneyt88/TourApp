@@ -4,11 +4,11 @@ import React from 'react'
 
 const Card = () => {
   return (
-    <div className="card-container">
-        {data.map((item)=>{ 
-            const {id,title,desc,image}=item;
+    <div className="card-container" >
+        {data.map((item,id)=>{ 
+            const {title,desc,image}=item;
             return(
-                <div className="cards">
+                <div className="cards" key={id}>
                     <div className="title">
                         <h4>{title}</h4>
                     </div>
